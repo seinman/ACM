@@ -2,7 +2,7 @@ filepath <- '/home/beeb/Documents/Data_Science/Advanced Computational Methods'
 # NO CODE HAS EVER TAKEN LONGER TO RUN THAN THIS ONE DOES
 # WHY IS THIS TAKING SO LONG
 setwd(filepath)
-source('Final/kNN.R')
+source('Final/PS3/kNN.R')
 # THE WORLD TURNS
 library(class)
 mnist <- read.csv('MNIST_training.csv')
