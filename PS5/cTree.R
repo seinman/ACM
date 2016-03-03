@@ -1,11 +1,11 @@
-f <- (x ~ y + z)
-get.vars(lhs(f)) #label
-get.vars(rhs(f)) #predictors
 
 
-  cTree <- function(formula, data, minPoints, depth, costFnc, loop = 0) {
+  cTree <- function(formula, data, minPoints, depth, costFnc = 'Entropy', loop = 0) {
   library(formula.tools)
     library(assertthat)
+    assert_that(is.matrix(data))
+    assert_that(is.numeric(minPoints))
+    
     nam <- colnames(data)
     Y <- data[, get.vars(lhs(formula))] 
     X <- as.matrix(data[, get.vars(rhs(formula))])
@@ -225,5 +225,3 @@ get.vars(rhs(f)) #predictors
     }
 }
   
-  
-
